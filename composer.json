@@ -1,16 +1,16 @@
 {
     "name": "kemetech/fusion",
-    "description": "Laravel blade , TALL stack UI library",
+    "description": "Laravel blade , TALL stack UI library\"",
     "type": "library",
-    
-    "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^10.0"
+        "livewire/livewire": "dev-main",
+        "laravel/framework": "11.x-dev",
+        "php": "^8.2"
     },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Fusion\\": "src/"
+            "Kemetech\\Fusion\\": "src/"
         }
     },
     "authors": [
@@ -18,5 +18,14 @@
             "name": "Moataz Elsayed",
             "email": "dr.moatazelsayed@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fusion\\Providers\\FusionProvider"
+            ]
+            
+        }
+    }
 }
