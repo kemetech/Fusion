@@ -1,0 +1,15 @@
+{
+    "name": "kemetech/fusion",
+    "autoload": {
+        "psr-4": {
+            "Fusion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Moataz Elsayed",
+            "email": "dr.moatazelsayed@gmail.com"
+        }
+    ],
+    "require": {}
+}

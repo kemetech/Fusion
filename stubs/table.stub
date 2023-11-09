@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Livewire\Tables;
+
+use Fusion\Facades\Grid;
+use Fusion\LiveWire\BaseTable;
+
+class {{ class }} extends BaseTable
+{
+    public function mount()
+    {
+        $this->model();
+        $this->columns();
+        $this->actions();
+        $this->search();
+        $this->relations();
+
+    }
+    public function model()
+    {
+        Grid::model(\{{ model }}::class);
+    }
+
+public function relations()
+    {
+        Grid::relations();
+    }
+
+    public function actions()
+    {
+        Grid::action('view')->route('admin.dashboard');
+
+        Grid::action('edit')->route('admin.dashboard');
+                          
+        Grid::action('delete')->route('admin.dashboard');
+    }
+
+    public function columns()
+    {
+        Grid::column('id')->sortable();
+                          
+        Grid::column('name')->filterable();
+        
+        Grid::column('created_at')->sortable();
+    }
+
+    public function search()
+    {
+        Grid::search('name');
+    }
+
+    public function pagination()
+    {
+        Grid::pagination(10);
+    }
+}
