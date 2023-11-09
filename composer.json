@@ -1,5 +1,13 @@
 {
     "name": "kemetech/fusion",
+    "description": "Laravel blade , TALL stack UI library",
+    "type": "library",
+    
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0"
+    },
     "autoload": {
         "psr-4": {
             "Fusion\\": "src/"
@@ -10,6 +18,5 @@
             "name": "Moataz Elsayed",
             "email": "dr.moatazelsayed@gmail.com"
         }
-    ],
-    "require": {}
+    ]
 }

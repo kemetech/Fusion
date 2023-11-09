@@ -71,6 +71,7 @@ class Input extends Component
         public ?string $btnHref = null,
         public ?string $tooltip = null,
         public ?string $tooltipDir = 'top',
+        // public ?string $btnAtt = null,
 
         public ?string $type='text',
         public ?string $field='text',
@@ -96,6 +97,9 @@ class Input extends Component
         public ?string $placeholder = null,
         public string $radius = 'default',
         public ?string $button = null,
+
+        public ?array $options = null,
+
 
     )
     {
