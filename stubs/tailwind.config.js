@@ -15,6 +15,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/views/*.blade.php',
+        
         './packages/Kemetech/Fusion/resources/views/*.blade.php',
         './packages/Kemetech/Fusion/resources/views/**/*.blade.php',
         './packages/Kemetech/Fusion/resources/views/**/**/*.blade.php',

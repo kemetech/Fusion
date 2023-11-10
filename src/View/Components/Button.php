@@ -123,6 +123,8 @@ class Button extends Component
         public bool $circle = false,
         public string $tag = 'button',
 
+        public bool $animate = false,
+
     )
     {
         if($circle){
@@ -149,6 +151,7 @@ class Button extends Component
        
         $this->classes = Arr::toCssClasses([
             'group justify-center inline-flex items-center gap-2 border',
+            'hover:-translate-y-1' => $this->animate,
             'w-full' => $this->full,
             'cursor-pointer ' => $this->href,
             $this->colorClasses[$this->variant][$this->color],

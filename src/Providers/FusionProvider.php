@@ -2,6 +2,7 @@
 
 namespace Fusion\Providers;
 
+use Fusion\Console\Commands\InstallCommand;
 use Fusion\Console\Commands\MakeTable;
 use Fusion\Contracts\Action;
 use Fusion\Grid\Action as GridAction;
@@ -32,12 +33,16 @@ class FusionProvider extends ServiceProvider
             $this->commands([
                 MakeTable::class,
             ]);
+            $this->commands([
+                InstallCommand::class,
+            ]);
         }
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'fusion');
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/tables'),
         ]);
+    
 
         Blade::component('fusion::components.cell', 'fusion-grid-cell');
         Blade::component('fusion::components.action', 'fusion-grid-action');
